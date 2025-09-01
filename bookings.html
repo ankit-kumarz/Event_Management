@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Event Bookings</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bookings-list">
+            <h1>All Event Bookings</h1>
+            <div id="bookingsList" class="bookings-grid"></div>
+            <button id="newBooking" class="secondary-btn">Book New Event</button>
+            <button id="logout" class="danger-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Event</h2>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editEventName">Event Name:</label>
+                    <input type="text" id="editEventName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEventDate">Event Date:</label>
+                    <input type="date" id="editEventDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEventTime">Event Time:</label>
+                    <input type="time" id="editEventTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVenue">Venue:</label>
+                    <input type="text" id="editVenue" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEventType">Event Type:</label>
+                    <select id="editEventType" required>
+                        <option value="">Select Event Type</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday Party</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="conference">Conference</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="primary-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/bookings.js"></script>
+</body>
+</html>
